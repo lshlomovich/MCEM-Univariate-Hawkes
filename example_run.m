@@ -48,6 +48,7 @@ for explore_rep = 1:n_realisations
     [mean_est, ests, ~, ~, ~] = MCEM_univariate(data, N_monte_carlo, n_times, init_est, method, 0, end_time, bin_width, 1e-2);
 
     true_ests(explore_rep,:) = true_value_est;
-    mean_ests(explore_rep,:) = mean_est;
+    mean_unif_ests(explore_rep,:) = init_est;
+    mean_seq_ests(explore_rep,:) = mean_est;
 
 end
