@@ -37,9 +37,10 @@ if exist('seed','var')
     disp('seed exists')
     rng(seed);
 else
-    seed = int32((now - 7.361e5) * 1e6);
-    disp(['generated seed: ' num2str(seed)]);
-    rng(seed);
+%     seed = int32((now - 7.361e5) * 1e6);
+%     disp(['generated seed: ' num2str(seed)]);
+%     rng(seed);
+    rng('shuffle')
 end
 
 
